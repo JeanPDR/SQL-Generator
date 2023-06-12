@@ -5,24 +5,27 @@ import CodeDisplay from './components/CodeDisplay';
 
 export default function App() {
 
-  const getQuery = async () => {
-    try{
-       const options = {
+  const getQuery = async (): Promise<void> => {
+    try {
+      const options: RequestInit = {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          message:"create a table"
+          message: "create a table"
         })
-       }
-       const response = await fetch("https:sql.jeanpdr.dev:4000/completions", options)
-       const data = await response.json()
-       console.log(data)
-    }catch (error){
+      };
+  
+      const response = await fetch("https://sql.jeanpdr.dev:4000/completions", options);
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
       console.error(error);
     }
-  }
+  };
+  
+  getQuery();
   return (
     <div className="app">
       <MessagesDisplay />
