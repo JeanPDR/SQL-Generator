@@ -22,7 +22,7 @@ app.post("/completions", async (req: Request, res: Response) => {
       messages: [
         {
           role: "user",
-          content: `Create a SQL request to ${req.body.message}`
+          content: "Create a SQL request to" + req.body.message
         }
       ]
     });
