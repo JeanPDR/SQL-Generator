@@ -3,7 +3,7 @@ import cors from "cors";
 import { Configuration, OpenAIApi } from "openai";
 
 const app: Application = express();
-const PORT = 4000;
+const port =  process.env.PORT || 4000;
 
 app.use(cors());
 app.use(express.json());
@@ -33,4 +33,4 @@ app.post("/completions", async (req: Request, res: Response) => {
   }
 });
 
-app.listen(PORT, () => console.log(`Servidor funcionando na porta ${PORT}`));
+app.listen(port, () => console.log(`Servidor funcionando na porta ${port}`));
