@@ -32,7 +32,7 @@ export default function App() {
       <input />
       <CodeDisplay />
       <div className="button-container">
-        <button id="get-query" onClick={getQuery}>obter consulta</button>
+        <button id="get-query" onClick={get-query}>obter consulta</button>
         <button id="clear-chat">limpar conversa</button>
       </div>
     </div>
