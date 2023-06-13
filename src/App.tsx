@@ -17,7 +17,7 @@ export default function App() {
         })
       };
   
-      const response = await fetch("https://sql.jeanpdr.dev:4000/completions", options);
+      const response = await fetch("https://sql-generator-7ybdtvzx0-jeanpdr.vercel.app:4000/completions", options);
       const data = await response.json();
       console.log(data);
     } catch (error) {
