@@ -18,7 +18,7 @@ const openai = new OpenAIApi(configuration)
 app.post("/completions", async (req: Request, res: Response) => {
   try {
     const completion = await openai.createChatCompletion({
-      model: "gpt-3.5",
+    model: "gpt-3.5-turbo",
       messages: [
         {
           role: "user",
